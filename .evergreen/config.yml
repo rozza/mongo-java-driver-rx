@@ -293,14 +293,14 @@ functions:
           ${PREPARE_SHELL}
           MONGODB_URI="${MONGODB_URI}" .evergreen/run-coverage.sh
 
-  "run integration tests":
+  "run tests":
     - command: shell.exec
       type: test
       params:
         working_dir: "src"
         script: |
           ${PREPARE_SHELL}
-          SCALA_VERSION="${SCALA_VERSION}" MONGODB_URI="${MONGODB_URI}" TOPOLOGY=${TOPOLOGY} .evergreen/run-it-tests.sh
+          MONGODB_URI="${MONGODB_URI}" JDK="${JDK}" .evergreen/run-tests.sh
 
   "publish snapshots":
     - command: shell.exec
