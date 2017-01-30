@@ -275,15 +275,6 @@ functions:
           ${PREPARE_SHELL}
           .evergreen/run-static-checks.sh
 
-  "run unit tests":
-    - command: shell.exec
-      type: test
-      params:
-        working_dir: "src"
-        script: |
-          ${PREPARE_SHELL}
-          SCALA_VERSION="${SCALA_VERSION}" .evergreen/run-unit-tests.sh
-
   "run coverage":
     - command: shell.exec
       type: test
