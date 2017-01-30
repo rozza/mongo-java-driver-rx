@@ -340,6 +340,7 @@ tasks:
         - variant: "static-checks"
           name: "static-checks-task"
       commands:
+        - func: "bootstrap mongo-orchestration"
         - func: "run tests"
 
     - name: "publish-snapshots-task"
