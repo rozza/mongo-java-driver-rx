@@ -333,7 +333,7 @@ tasks:
 
     - name: "static-checks-task"
       commands:
-        - func: "run scalastyle"
+        - func: "run static checks"
 
     - name: "test-task"
       depends_on:
